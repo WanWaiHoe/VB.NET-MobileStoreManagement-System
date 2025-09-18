@@ -14,12 +14,33 @@ It provides an all-in-one solution for managing mobile store operations includin
 
 ## Features
 
-- **User Authentication**: Simple login and registration system with role-based access, directing Admin and Staff users to their respective page.
-- **Inventory Management**: Add, edit, delete, and search products; record stock input and output
-- **Sales Records**: Track sales date, salesman details, customer information, and total price
-- **Staff Attendance**: Record check-in/check-out and access attendance history
-- **Data Filtering**: Filter records by date, status, or keyword
-- **Local Database**: All data stored in MSSQL LocalDB
+- **User Authentication**  
+  Simple login and registration system with role-based access, directing Admin and Staff users to their respective page.
+- **Role-Based-Action**
+  - **Admin**
+    - Can view all staff record in Sales Page.
+    - Has a dedicated Staff Page to view and manage all staff details.
+    - Can view all staff attendance record in Attendance Page.
+    - Cann add remark in the Store Page for specific products.
+  - **Staff**
+    - Can view only their own sales record in Sales Page.
+    - Attendance Page allows check-in/check-out and viewing their own records.
+    - Can access the Store Page to update stock and add remark
+- **Inventory Management**  
+  Add, edit, delete, and search product; record stock input and output.  
+  Both admin and Staff share the same Store Page for consistent inventory updates.
+- **Sales Record**  
+  Track sales date, salesman detail, customer information, and total price.  
+  Role-Based filtering ensure data visibility based on permissions.
+- **Staff Attendance**  
+  Record daily check-in/check=out.  
+  Admin can monitor all staff history, while staff can only view their own records.
+- **Remark System**  
+  Store Page includes a remark field for Admin and Staff to leave notes on specific products.
+- **Data Filtering**  
+  All mojor page (Sales, Attendance, Store) support filtering by date, status or keyword for easier record management
+- **Local Database**  
+  All data is stored in MSSQL LocalDB, ensuring fast local access and no depandency on external servals.
 
 ## Tech Stack
 
